@@ -39,7 +39,7 @@ BUILD_RELEASE_DIR=release$(ARCH)$(GLIBC)
 EGCS=gcc
 CC=$(EGCS)
 
-BASE_CFLAGS=-Dstricmp=strcasecmp -m32
+BASE_CFLAGS=-Dstricmp=strcasecmp -m32 -fcommon
 RELEASE_CFLAGS=$(BASE_CFLAGS) -g -mtune=pentiumpro -O6 -ffast-math -funroll-loops \
 	-fomit-frame-pointer -fexpensive-optimizations
 DEBUG_CFLAGS=$(BASE_CFLAGS) -g
